@@ -1,7 +1,7 @@
 {
-  "name": "bootstrap-tour",
+  "name": "ap-bootstrap-tour",
   "description": "Quick and easy way to build your product tours with Bootstrap Popovers.",
-  "version": "0.12.0",
+  "version": "0.12.1",
   "keywords": [
     "tour",
     "bootstrap",
@@ -28,7 +28,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/sorich87/bootstrap-tour.git"
+    "url": "https://github.com/apolloeleven/bootstrap-tour.git"
   },
   "bugs": {
     "url": "https://github.com/sorich87/bootstrap-tour/issues"

@@ -130,7 +130,7 @@
 
       # Reshow popover on window resize using debounced resize
       @_onResize => @showStep @_current
-      @_onScroll => @_showPopoverAndOverlay(@_current)
+      #@_onScroll => @_showPopoverAndOverlay(@_current)
 
       # Continue a tour that had started on a previous page load
       @showStep @_current unless @_current is null
@@ -637,7 +637,7 @@
         timeout = setTimeout(callback, 100)
 
     # Debounced window scroll
-    _onScroll: (callback, timeout) ->
+    _onScroll: () ->
       $(window).on "scroll.tour-#{@_options.name}", ->
         clearTimeout(timeout)
         timeout = setTimeout(callback, 100)

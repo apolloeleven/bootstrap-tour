@@ -147,11 +147,6 @@ var bind = function(fn, me){ return function(){ return fn.apply(me, arguments); 
           return _this.showStep(_this._current);
         };
       })(this));
-      this._onScroll((function(_this) {
-        return function() {
-          return _this._showPopoverAndOverlay(_this._current);
-        };
-      })(this));
       if (this._current !== null) {
         this.showStep(this._current);
       }
@@ -728,8 +723,9 @@ var bind = function(fn, me){ return function(){ return fn.apply(me, arguments); 
       });
     };
 
-    Tour.prototype._onScroll = function(callback, timeout) {
+    Tour.prototype._onScroll = function() {
       return $(window).on("scroll.tour-" + this._options.name, function() {
+        var timeout;
         clearTimeout(timeout);
         return timeout = setTimeout(callback, 100);
       });

@@ -1,5 +1,5 @@
 /* ========================================================================
- * bootstrap-tour - v0.11.0
+ * bootstrap-tour - v0.12.0
  * http://bootstraptour.com
  * ========================================================================
  * Copyright 2012-2015 Ulrich Sossou
@@ -145,11 +145,6 @@ var bind = function(fn, me){ return function(){ return fn.apply(me, arguments); 
       this._onResize((function(_this) {
         return function() {
           return _this.showStep(_this._current);
-        };
-      })(this));
-      this._onScroll((function(_this) {
-        return function() {
-          return _this._showPopoverAndOverlay(_this._current);
         };
       })(this));
       if (this._current !== null) {
@@ -728,8 +723,9 @@ var bind = function(fn, me){ return function(){ return fn.apply(me, arguments); 
       });
     };
 
-    Tour.prototype._onScroll = function(callback, timeout) {
+    Tour.prototype._onScroll = function() {
       return $(window).on("scroll.tour-" + this._options.name, function() {
+        var timeout;
         clearTimeout(timeout);
         return timeout = setTimeout(callback, 100);
       });
