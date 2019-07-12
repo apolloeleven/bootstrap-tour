@@ -1,5 +1,5 @@
 {
-  "name": "bootstrap-tour",
+  "name": "ap-bootstrap-tour",
   "main": [
     "./build/js/bootstrap-tour-standalone.js",
     "./build/css/bootstrap-tour-standalone.css"
